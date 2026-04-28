@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,7 +23,7 @@
             <div class="col-10 col-md-6 col-lg-4 text-center">
                 <img src="imagenes/logocbn/logo1.jpeg" class="img-fluid mb-3" style="max-width: 200px;" alt="Logo">
                 <h2>Cervecería Boliviana Nacional S.A.</h2>
-                <?php session_start(); if (isset($_SESSION['error'])) { echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>'; unset($_SESSION['error']); } ?>
+                <?php if (isset($_SESSION['error'])) { echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>'; unset($_SESSION['error']); } ?>
                 <form action="controlador/login.php" method="post">
                     <div class="mb-3">
                         <label for="usuario" class="form-label">Usuario</label>

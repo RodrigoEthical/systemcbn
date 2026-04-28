@@ -2,7 +2,7 @@ Options -Indexes
 RewriteEngine On
 
 # Denegar acceso directo a carpetas sensibles
-RewriteRule ^(modelo|controlador|vista)/ - [F,L]
+
 
 # Redirigir HTTP a HTTPS (opcional, descomenta si tienes SSL)
 # RewriteCond %{HTTPS} off
